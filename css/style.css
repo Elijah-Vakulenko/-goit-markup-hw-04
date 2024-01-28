@@ -113,6 +113,10 @@ img {
 .link:hover,
 .link:focus {
   color: #404bbf;
+  background-image: url("../images/hover.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
 }
 
 .address {
@@ -134,7 +138,13 @@ img {
 /* 1ST SECTION HERO */
 
 .hero {
-  background-color: #2e2f42;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office.png");
+  background-repeat: no-repeat;
+  background-position: center center;
   text-align: center;
   padding: 188px 0;
 }
