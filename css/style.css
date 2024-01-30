@@ -113,7 +113,7 @@ img {
 .link:hover,
 .link:focus {
   color: #404bbf;
-  background-image: url("../images/hover.png");
+  background-image: url(../images/hover.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -142,7 +142,7 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/people-office.png");
+    url(../images/people-office.png);
   background-repeat: no-repeat;
   background-position: center center;
   text-align: center;
