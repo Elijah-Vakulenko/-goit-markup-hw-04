@@ -98,6 +98,17 @@ img {
 .menu-item {
 }
 
+/* .link {
+  display: block;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  padding: 24px 0;
+} */
+
 .link {
   display: block;
   color: #2e2f42;
@@ -107,16 +118,25 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   padding: 24px 0;
+  position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.link:focus,
+.link:hover::after {
+  content: "";
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  position: absolute;
+  display: block;
+}
+
 .link:hover,
 .link:focus {
   color: #404bbf;
-  background-image: url(../images/hover.png);
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: contain;
 }
 
 .address {
@@ -325,6 +345,38 @@ img {
 
 .folio-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.folio-item:hover {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
+.folio-picture {
+  position: relative;
+  overflow: hidden;
+}
+
+.folio-picture img {
+  width: 100%;
+}
+
+.folio-item:hover .folio-overlay {
+  transform: translateY(0);
+}
+
+.folio-overlay {
+  color: #f4f4fd;
+  background-color: #4d5ae5;
+  padding: 40px 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
 }
 
 .folio-container {
